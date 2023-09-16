@@ -1,0 +1,16 @@
+{
+  "name": "bankist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "start": "parcel src/index.html --open chrome",
+    "build": "parcel build src/index.html"
+  },
+  "author": "Krittin Saenpakdi",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.9.3",
+    "sass": "^1.67.0"
+  }
+}
