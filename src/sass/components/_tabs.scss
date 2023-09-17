@@ -8,12 +8,21 @@
     margin-right: 2.5rem;
     transform: translateY(-50%);
 
+    @media only screen and (max-width: $bp-small) {
+      margin-right: 0;
+    }
+
     &-container {
       display: flex;
       justify-content: center;
 
       @media only screen and (max-width: $bp-large) {
         justify-content: space-evenly;
+      }
+
+      @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+        gap: 1.6rem;
       }
     }
 
@@ -50,6 +59,10 @@
 
     font-size: 1.7rem;
     padding: 2.5rem 7rem 6.5rem 7rem;
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 2.5rem 3rem 6.5rem 4rem;
+    }
 
     p {
       grid-column: 2;
