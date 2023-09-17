@@ -135,6 +135,10 @@
     text-align: center;
     padding: 10rem 3rem;
 
+    @media only screen and (max-width: $bp-small) {
+      padding: 8rem 3rem;
+    }
+
     .section {
       &__header {
         color: #fff;
