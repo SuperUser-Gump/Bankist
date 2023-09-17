@@ -19,6 +19,10 @@
     justify-items: start;
   }
 
+  &__text-box > :not(:last-child) {
+    margin-bottom: 3rem;
+  }
+
   &__img {
     width: 100%;
     grid-column: 2 / 3;
