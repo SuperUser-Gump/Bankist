@@ -21,6 +21,19 @@
     @media only screen and (max-width: $bp-largest) {
       max-width: 105rem;
     }
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      row-gap: 6rem;
+    }
+  }
+
+  &__text-box,
+  &__img-box {
+    @media only screen and (max-width: $bp-medium) {
+      text-align: center;
+    }
   }
 
   &__text-box > :not(:last-child) {
@@ -32,6 +45,11 @@
     grid-column: 2 / 3;
     grid-row: 1 / span 4;
     transform: translateY(-6rem);
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 50%;
+      transform: translateY(0);
+    }
   }
 }
 

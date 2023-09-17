@@ -6,6 +6,10 @@
   gap: 4rem;
   margin: 0 12rem;
 
+  @media only screen and (max-width: $bp-medium) {
+    margin: 0;
+  }
+
   &__img {
     width: 100%;
   }
