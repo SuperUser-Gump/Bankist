@@ -30,6 +30,8 @@
   }
 
   &__form input {
+    font-family: inherit;
+    color: inherit;
     font-size: 1.7rem;
     padding: 1rem 1.5rem;
     border: 1px solid $color-grey-3;
