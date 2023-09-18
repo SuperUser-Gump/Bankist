@@ -2,7 +2,6 @@
 
 ///////////////////////////////////////
 // Modal window
-
 const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.btn--close-modal');
@@ -286,3 +285,16 @@ const btnNav = document.querySelector('.mobile-nav');
 btnNav.addEventListener('click', function () {
   header.classList.toggle('nav-open');
 });
+
+///////////////////////////////////////
+// Logo scrolling
+const scrollToTop = function (e) {
+  e.preventDefault();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+const navLogo = document.querySelector('.nav__logo');
+navLogo.addEventListener('click', scrollToTop);
+
+const footerLogo = document.querySelector('.footer__logo');
+footerLogo.addEventListener('click', scrollToTop);

@@ -32,11 +32,17 @@
     text-decoration: none;
   }
 
+  &__link &__logo:focus {
+    box-shadow: none;
+  }
+
   &__logo {
     height: 5rem;
     display: block;
     margin: 0 auto;
     margin-bottom: 5rem;
+
+    cursor: pointer;
   }
 
   &__copyright {
