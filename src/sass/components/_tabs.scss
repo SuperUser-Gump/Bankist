@@ -16,10 +16,6 @@
       display: flex;
       justify-content: center;
 
-      @media only screen and (max-width: $bp-large) {
-        justify-content: space-evenly;
-      }
-
       @media only screen and (max-width: $bp-small) {
         flex-direction: column;
         gap: 1.6rem;
@@ -51,6 +47,10 @@
 
     &--active {
       transform: translateY(-66%);
+
+      @media only screen and (max-width: $bp-small) {
+        transform: translateY(-50%);
+      }
     }
   }
 
