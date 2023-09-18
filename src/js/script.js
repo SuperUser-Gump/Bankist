@@ -162,7 +162,7 @@ imgTargets.forEach(img => imgObserver.observe(img));
 
 ///////////////////////////////////////
 // Sliders
-const slider = function () {
+const slider = function (interval) {
   const slides = document.querySelectorAll('.slide');
   const btnLeft = document.querySelector('.slider__btn--left');
   const btnRight = document.querySelector('.slider__btn--right');
@@ -170,6 +170,21 @@ const slider = function () {
 
   let curSlide = 0;
   const maxSlide = slides.length;
+
+  let timer;
+
+  const startTimer = function () {
+    timer = setInterval(nextSlide, interval);
+  };
+
+  const stopTimer = function () {
+    clearInterval(timer);
+  };
+
+  const resetTimer = function () {
+    stopTimer();
+    startTimer();
+  };
 
   const createDots = function () {
     slides.forEach(function (_, i) {
@@ -222,15 +237,28 @@ const slider = function () {
     createDots();
     goToSlide(0);
     activateDot(0);
+    startTimer();
   };
   init();
 
-  btnRight.addEventListener('click', nextSlide);
-  btnLeft.addEventListener('click', prevSlide);
+  btnRight.addEventListener('click', function () {
+    nextSlide();
+    resetTimer();
+  });
+  btnLeft.addEventListener('click', function () {
+    nextSlide();
+    resetTimer();
+  });
 
   document.addEventListener('keydown', function (e) {
-    e.key === 'ArrowLeft' && prevSlide();
-    e.key === 'ArrowRight' && nextSlide();
+    if (e.key === 'ArrowLeft') {
+      prevSlide();
+      resetTimer();
+    }
+    if (e.key === 'ArrowRight') {
+      nextSlide();
+      resetTimer();
+    }
   });
 
   dotContainer.addEventListener('click', function (e) {
@@ -238,7 +266,8 @@ const slider = function () {
       const { slide } = e.target.dataset;
       goToSlide(slide);
       activateDot(slide);
+      resetTimer();
     }
   });
 };
-slider();
+slider(5000);
