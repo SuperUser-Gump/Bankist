@@ -4,6 +4,11 @@
   box-sizing: inherit;
 }
 
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem $color-primary-opacity;
+}
+
 $bp-largest: 84em; // 1344px
 $bp-large: 75em; // 1200px
 $bp-medium: 59em; // 944px
