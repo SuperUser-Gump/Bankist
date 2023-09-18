@@ -37,10 +37,6 @@
   &__title {
     max-width: 80rem;
     margin: 0 auto 8rem auto;
-
-    @media only screen and (max-width: $bp-large) {
-      max-width: 105rem;
-    }
   }
 
   &__description {
