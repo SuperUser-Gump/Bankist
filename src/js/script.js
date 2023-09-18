@@ -52,6 +52,8 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
     const id = e.target.getAttribute('href');
     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
   }
+
+  header.classList.remove('nav-open');
 });
 
 ///////////////////////////////////////
@@ -277,3 +279,10 @@ slider(5000);
 const yearEl = document.querySelector('.year');
 const currentYear = new Date().getFullYear();
 yearEl.textContent = currentYear;
+
+///////////////////////////////////////
+// Mobile navigation
+const btnNav = document.querySelector('.mobile-nav');
+btnNav.addEventListener('click', function () {
+  header.classList.toggle('nav-open');
+});
